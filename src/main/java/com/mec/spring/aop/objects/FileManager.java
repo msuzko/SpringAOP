@@ -1,5 +1,7 @@
 package com.mec.spring.aop.objects;
 
+import com.mec.spring.aop.annotations.ShowResult;
+import com.mec.spring.aop.annotations.ShowTime;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -12,6 +14,8 @@ import java.util.TreeSet;
 @Component
 public class FileManager {
 
+//    @ShowTime
+//    @ShowResult
     public Set<String> getExtensionList(String folder) {
         File dir = new File(folder);
         Set<String> extList = new TreeSet<String>();
@@ -24,6 +28,7 @@ public class FileManager {
         return extList;
     }
 
+//    @ShowResult
     public Map<String,Integer> getExtensionCount(String folder){
         File dir = new File(folder);
         Map<String,Integer> map = new HashMap<String, Integer>();
